@@ -7,8 +7,9 @@
 .modal.right .modal-dialog {
     position: fixed;
     margin: auto;
-    width: 320px;
+    width: 50%;
     height: 100%;
+
     -webkit-transform: translate3d(0%, 0, 0);
     -ms-transform: translate3d(0%, 0, 0);
     -o-transform: translate3d(0%, 0, 0);
@@ -27,7 +28,7 @@
 }
 
 /*Left*/
-.modal.left.fade .modal-dialog{
+.modal.left.fade .modal-dialog {
     left: -320px;
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -35,7 +36,7 @@
     transition: opacity 0.3s linear, left 0.3s ease-out;
 }
 
-.modal.left.fade.in .modal-dialog{
+.modal.left.fade.in .modal-dialog {
     left: 0;
 }
 
@@ -69,8 +70,7 @@ body {
 }
 
 .demo {
-    padding-top: 60px;
-    padding-bottom: 110px;
+
 }
 
 .btn-demo {
@@ -99,4 +99,19 @@ body {
     font-weight: bold;
     font-size: 16px;
     color: #fff;
+}
+
+#myModal2 {
+    background: rgba(255, 255, 255, .5);
+}
+.headline{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+#container1{
+    margin-left:auto;
+    margin-right:auto;
+
 }
