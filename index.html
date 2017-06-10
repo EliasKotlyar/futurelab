@@ -6,6 +6,85 @@
 <!-- I recommend you host this file on your own, since this will change without warning -->
 <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<link href="styles.css" rel="stylesheet">
+
+
+<div class="container demo">
+
+
+    <div class="text-center" style="display:none">
+        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
+            Left Sidebar Modal
+        </button>
+
+        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2">
+            Right Sidebar Modal
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Left Sidebar</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </p>
+                </div>
+
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+    <!-- Modal -->
+    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">Right Sidebar</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+                        laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                        coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                        anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                        of them accusamus labore sustainable VHS.
+                    </p>
+                </div>
+
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
+
+
+</div><!-- container -->
+
+
 <div id="container1" style="position: relative; width: 80%; min-height: 800px;"></div>
 
 <style>
@@ -61,20 +140,28 @@
             latitude: 11.415,
             longitude: 165.1619
         }, {
-            name: 'Tsar Bomba',
-            radius: 70,
+            name: 'Videos 1',
+            radius: 10,
             yeild: 50000,
             country: 'USSR',
             fillKey: 'RUS',
             significance: 'Largest thermonuclear weapon ever tested—scaled down from its initial 100 Mt design by 50%',
             date: '1961-10-31',
-            latitude: 73.482,
-            longitude: 54.5854
+            latitude: 48.1222,
+            longitude: 11.6028
         }
     ], {
         popupTemplate: function (geo, data) {
             return '<div class="hoverinfo">Yield:' + data.yeild + 'Exploded on ' + data.date + ' by the ' + data.country + ''
         }
     });
+
+    bubble_map.svg.selectAll('.datamaps-bubble').on('click', function (element) {
+
+        $('#myModal2').modal('toggle');
+        console.log(element.name);
+    });
+
+
 </script>
 </body>
