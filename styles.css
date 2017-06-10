@@ -115,3 +115,14 @@ body {
     margin-right:auto;
 
 }
+
+
+.video-thumbnail{
+    width: 168px;
+    height: 94px;
+    background: red;
+    display: block;
+}
+.videorow{
+    padding-bottom:10px;
+}
